@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  f_date: 2013-04-25 14:37:39
+  weather_id: 1
+  description: MyString
+  morning_low_temp: 1
+  daytime_high_temp: 1
+  prec_day: 1
+  prec_night: MyString
+
+two:
+  f_date: 2013-04-25 14:37:39
+  weather_id: 1
+  description: MyString
+  morning_low_temp: 1
+  daytime_high_temp: 1
+  prec_day: 1
+  prec_night: MyString

@@ -1,0 +1,15 @@
+<table>
+<%- @states.each do |state| %>
+<tr>
+<td>
+<%= state.id %>
+</td>
+<td>
+<%= state.name %>
+</td>
+<td>
+<%= state.zip %>
+</td>
+</tr>
+<%- end %>
+</table>

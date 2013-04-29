@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+MnState.create([{ :name => 'Sacramento', :zip => 94203},
+                { name: 'Los Angeles', :zip => 90001 },
+                { name: 'Denver', :zip => 80201 }
+               ])

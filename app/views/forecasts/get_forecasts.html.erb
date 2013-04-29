@@ -49,7 +49,7 @@
           <%= forecast.prec_night %> %
         </td>
         <td>
-          <img src="<%= forecast.weather.picture_url %>">
+          <img src="<%= forecast.weather.try(:picture_url) %>">
         </td>
       </tr>
   <%- end %>

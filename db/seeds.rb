@@ -11,3 +11,4 @@ MnState.create([{ :name => 'Sacramento', :zip => 94203},
                 { name: 'Los Angeles', :zip => 90001 },
                 { name: 'Denver', :zip => 80201 }
                ])
+MnWeather.fetch_weather

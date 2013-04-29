@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'pg'
 
+gem "heroku"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,3 +39,8 @@ gem 'savon'
 
 # To use debugger
 # gem 'debugger'
+
+
+group :production do
+  gem 'thin'
+end

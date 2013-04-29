@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427225411) do
+ActiveRecord::Schema.define(:version => 20130429151144) do
 
   create_table "mn_forecasts", :force => true do |t|
     t.datetime "f_date"
@@ -34,5 +34,12 @@ ActiveRecord::Schema.define(:version => 20130427225411) do
   end
 
   add_index "mn_states", ["zip"], :name => "index_mn_states_on_zip"
+
+  create_table "mn_weathers", :force => true do |t|
+    t.string   "description"
+    t.string   "picture_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

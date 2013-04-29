@@ -1,3 +1,25 @@
 // Place all the styles related to the states controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#statebox {
+  width: 30%;
+  border: 1px solid;
+  float: left;
+}
+
+#weatherbox {
+  font-family: arial;
+  font-size: 12px;
+  border: 1px solid;
+  width: 50%;
+  float: left;
+  padding: 0% 9%;
+}
+
+.progress {
+  opacity: 0.3;
+  background-image: url('spinner.gif');
+  background-repeat: no-repeat;
+  background-position: 50%;
+}

@@ -1,7 +1,9 @@
 Weather::Application.routes.draw do
-  get "states/index"
-  
   root :to => 'states#index'
+
+  get "states/index"
+  get 'get_forecasts/:id' => 'forecasts#get_forecasts'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

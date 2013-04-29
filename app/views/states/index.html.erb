@@ -1,15 +1,22 @@
-<table>
-<%- @states.each do |state| %>
-<tr>
-<td>
-<%= state.id %>
-</td>
-<td>
-<%= state.name %>
-</td>
-<td>
-<%= state.zip %>
-</td>
-</tr>
-<%- end %>
-</table>
+<div id="statebox">
+  <table>
+    <%- @states.each do |state| %>
+        <tr>
+          <td>
+            <%= state.id %>
+          </td>
+          <td>
+            <a class="city" href="get_forecasts/<%= state.id %>">
+              <%= state.name %>
+            </a>
+          </td>
+          <td>
+            <%= state.zip %>
+          </td>
+        </tr>
+    <%- end %>
+  </table>
+</div>
+<div id="weatherbox">
+
+</div>

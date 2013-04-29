@@ -1,0 +1,57 @@
+<table>
+  <thead>
+  <tr>
+    <th>
+      Date
+    </th>
+    <th>
+      Description
+    </th>
+    <th>
+      Morning Low Temp.
+    </th>
+    <th>
+      Daytime High Temp.
+    </th>
+    <th>
+      Probability Of Precipiation
+      Day
+    </th>
+    <th>
+      Probability Of Precipiation
+      Night
+    </th>
+    <th>
+
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <%- @forecasts.each do |forecast| %>
+
+      <tr>
+        <td>
+          <%= forecast.f_date.strftime('%A %d-%b-%Y') %>
+        </td>
+        <td>
+          <%= forecast.description %>
+        </td>
+        <td>
+          <%= forecast.morning_low_temp %>
+        </td>
+        <td>
+          <%= forecast.daytime_high_temp %>
+        </td>
+        <td>
+          <%= forecast.prec_day %> %
+        </td>
+        <td>
+          <%= forecast.prec_night %> %
+        </td>
+        <td>
+          <img src="<%= forecast.weather.picture_url %>">
+        </td>
+      </tr>
+  <%- end %>
+  </tbody>
+</table>

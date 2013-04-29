@@ -1,18 +1,19 @@
 class MnForecast < ActiveRecord::Base
   attr_accessible :daytime_high_temp, :description, :f_date, :morning_low_temp, :prec_day, :prec_night, :weather_id
   belongs_to :state, :foreign_key => :state_id, :class_name => "MnState"
+  belongs_to :weather, :foreign_key => :weather_id, :class_name => "MnWeather"
 
   def self.get_forecast(state_id)
-    @forecasts = self.where(:state_id => state_id)
-    unless @forecasts.empty?
-      if @forecasts.first.try(:updated_at).try(:utc) < DateTime.now.utc - 3.hours
+    forecasts = self.where(:state_id => state_id)
+    unless forecasts.empty?
+      if forecasts.first.try(:updated_at).try(:utc) < DateTime.now.utc - 3.hours
         destroy_all(:state_id => state_id)
-        @forecasts = fetch_forecasts(state_id)
+        forecasts = fetch_forecasts(state_id)
       end
     else
-      @forecasts = fetch_forecasts(state_id)
+      forecasts = fetch_forecasts(state_id)
     end
-    return @forecasts
+    return forecasts
   end
 
   private

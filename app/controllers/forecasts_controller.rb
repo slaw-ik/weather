@@ -1,6 +1,14 @@
 class ForecastsController < ApplicationController
 
-  def get_forecasts(state_id)
-    @forecasts = MnForecast.get_forecast(state_id)
+  def get_forecasts
+    if params[:id]
+      @forecasts = MnForecast.get_forecast(params[:id])
+    end
+
+    respond_to do |format|
+      format.html {
+        render :layout => false
+      }
+    end
   end
 end
